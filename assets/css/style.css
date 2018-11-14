@@ -37,16 +37,14 @@ h4 {
 
 .crd-about {
     background-color: rgba(245, 189, 167, 0.932);
+    margin-bottom: 20px;
 }
 /* FOOTER */
 
-#backgroundColor {
-    background-color: rgb(107, 133, 133);
-    color: whitesmoke;
-}
-
 #footertxt {
     text-align: center;
+    font-weight: 600;
+    color: whitesmoke;
 }
 .footpos {
     display: flex;
@@ -54,16 +52,17 @@ h4 {
 }
 footer {
     border-top: 10px solid rgba(230, 105, 56, 0.932);
+    background-color: rgb(48, 53, 53);
     margin-top: 25em;
     padding-top: 20px;
-    padding-bottom: 17px;
+    padding-bottom: 15px;
     position: 0;
 }
 
 /* ABOUT PAGE */
 
 .aboutImg {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 /* PORTFOLIO PAGE */
