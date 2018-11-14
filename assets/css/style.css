@@ -26,6 +26,10 @@ h1 {
     color: rgb(207, 145, 93);
 }
 
+h4 {
+    color: rgb(228, 202, 180);
+}
+
 .crd-portfolio {
     background-color: rgba(248, 183, 158, 0.623);
     margin-bottom: 10px;
@@ -57,9 +61,12 @@ footer {
 }
 
 /* ABOUT PAGE */
+
 .aboutImg {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
+
+/* PORTFOLIO PAGE */
 .portImg {
     width: 60%;
     height: 80%;
