@@ -59,6 +59,9 @@ footer {
     position: 0;
 }
 
+.float-left {
+    float: left;
+}
 /* ABOUT PAGE */
 
 .aboutImg {
