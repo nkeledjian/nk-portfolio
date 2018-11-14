@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <title>Brick Breaker</title>
+      <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <style>
+        * { padding: 0; margin: 0; }
+        canvas { background: #eee; display: block; margin: 0 auto; }
+        a {text-decoration: none;}
+        p {text-align: center;}
+        h1 {font-family: 'Kosugi Maru', sans-serif; text-align: center;}
+      </style>
+  </head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">NK</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">About
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+  <div>
+    <h1>BRICK SMASHER</h1>
+  </div>
+  <br>
+  <canvas id="bricksmasher" width="480" height="320"></canvas> <!--ORIGINAL: width="480" height="320"-->
+  <br>
+  <div>
+    <a class="align" href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript"><p>Check out where I learned to build this game!</p></a>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous">
+</script>
+
+<!--BEGIN 2D JavaScript Game - BRICK SMASHER -->
+<script>
+  var canvas = document.getElementById("bricksmasher");
+  var scrn = canvas.getContext("2d");
+  var ballRadius = 10;
+  var x = canvas.width/2;
+  var y = canvas.height-30;
+  var dx = 2;
+  var dy = -2;
+  var paddleHeight = 10;
+  var paddleWidth = 85;
+  var paddleX = (canvas.width-paddleWidth)/2;
+  var rightPressed = false;
+  var leftPressed = false;
+  var brickRowCount = 3;
+  var brickColumnCount = 5;
+  var brickWidth = 75;
+  var brickHeight = 20;
+  var brickPadding = 10;
+  var brickOffsetTop = 30;
+  var brickOffsetLeft = 30;
+  var score = 0;
+  var lives = 3;
+
+  var bricks = [];
+  for(var c=0; c<brickColumnCount; c++) {
+      bricks[c] = [];
+      for(var r=0; r<brickRowCount; r++) {
+          bricks[c][r] = { x: 0, y: 0, status: 1 };
+      }
+  }
+
+  document.addEventListener("keydown", keyDownHandler, false);
+  document.addEventListener("keyup", keyUpHandler, false);
+  document.addEventListener("mousemove", mouseMoveHandler, false);
+
+  function mouseMoveHandler(e) {
+    var relativeX = e.clientX - canvas.offsetLeft;
+    if(relativeX > 0 && relativeX <canvas.width) {
+      paddleX = relativeX - paddleWidth/2;
+    }
+  }
+
+  function keyDownHandler(e) {
+    if(e.keyCode == 39) {
+        rightPressed = true;
+    }
+    else if(e.keyCode == 37) {
+        leftPressed = true;
+    }
+  }
+
+  function keyUpHandler(e) {
+    if(e.keyCode == 39) {
+        rightPressed = false;
+    }
+    else if(e.keyCode == 37) {
+        leftPressed = false;
+    }
+  }
+
+  function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+      for(var r=0; r<brickRowCount; r++) {
+          var b = bricks[c][r];
+          if(b.status == 1) {
+          if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+            dy = -dy;
+            b.status = 0;
+            score++;
+            if(score == brickRowCount*brickColumnCount) {
+              alert("YOU WIN! CONGRATULATIONS!");
+              document.location.reload();
+            }
+          }
+        }
+      }
+    }
+  }
+  /* .arc = circle rendering, fillstyle = color, fillText = text */
+  /* Draws the score board*/
+  function drawScore() {
+    scrn.font = "16px Tahoma";
+    scrn.fillStyle = "#800000";
+    scrn.fillText("Score: "+score, 8, 20);
+  }
+  /* Draws number of lives */
+  function drawLives() {
+    scrn.font = "16px Arial";
+    scrn.fillStyle = "#800000"
+    scrn.fillText("Lives: "+lives, canvas.width-65, 20);
+  }
+  /* Draws the ball*/
+  
+  function drawBall() {
+    scrn.beginPath();
+    scrn.arc(x, y, ballRadius, 0, Math.PI*2);
+    scrn.fillStyle = "#00689A";
+    scrn.fill();
+    scrn.closePath();
+  }
+  /*Draws the paddle */
+  function drawPaddle() {
+    scrn.beginPath();
+    scrn.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+    scrn.fillStyle = "#800000";
+    scrn.fill();
+    scrn.closePath();
+  }
+  /* Draw the bricks */
+  function drawBricks() {
+    for(var c=0; c<brickColumnCount; c++) {
+      for(var r=0; r<brickRowCount; r++) {
+        if(bricks[c][r].status == 1) {
+          var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+          var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+          bricks[c][r].x = brickX;
+          bricks[c][r].y = brickY;
+          scrn.beginPath();
+          scrn.rect(brickX, brickY, brickWidth, brickHeight);
+          scrn.fillStyle = "#800000";
+          scrn.fill();
+          scrn.closePath();
+        }
+      }
+    }
+  }
+
+  function draw() {
+    scrn.clearRect(0, 0, canvas.width, canvas.height);
+    drawBricks();
+    drawBall();
+    drawPaddle();
+    drawScore();
+    drawLives();
+    collisionDetection();
+    /*If X-axis (left, right border) collision, reverse motion of ball*/
+    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+        dx = -dx;}
+    /*If y-axis (top border or paddle) collision, reverse motion of ball*/
+    if(y + dy < ballRadius) {
+        dy = -dy;}
+
+    else if(y + dy > canvas.height-ballRadius) {
+      if(x > paddleX && x < paddleX + paddleWidth) {
+        if(y= y-paddleHeight) {
+          dy = -dy;
+        }   
+      }
+      else {
+        lives--; /* Subtracts a life, if no more lives and collision with bottom border = game over!*/
+        if(!lives) {
+          alert("GAME OVER!");
+          document.location.reload();
+        }
+        else {
+          x = canvas.width/2;
+          y = canvas.height-30;
+          dx = 2;
+          dy = -2;
+          paddleX = (canvas.width-paddleWidth)/2;  
+        }
+      }
+    }  
+    /*Right Button = move paddle 7px to the right (if), Left Button = 7px to left (else if)*/
+    if (rightPressed && paddleX < canvas.width-paddleWidth) {
+      paddleX += 6;
+    }
+    else if (leftPressed && paddleX > 0) {
+      paddleX -= 6;
+    }
+    x += dx;
+    y += dy;
+    requestAnimationFrame(draw); /* requestAnimationFrame is the newest standard for rendering frames/graphics. The old standard, setInterval() (which controls the time delay between frames), has been phased out. */
+  }
+
+draw();
+</script>
+
+</html>
