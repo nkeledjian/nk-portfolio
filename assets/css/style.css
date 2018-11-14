@@ -17,13 +17,16 @@ main {
     position:fixed;
 }
 
+h1 {
+    color: rgb(207, 145, 93);
+}
+
 /* FOOTER */
 
 #backgroundColor {
     background-color: rgb(107, 133, 133);
     color: whitesmoke;
 }
-
 
 #footertxt {
     text-align: center;
