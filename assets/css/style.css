@@ -65,7 +65,9 @@ footer {
 /* ABOUT PAGE */
 
 .aboutImg {
-    margin-bottom: 33px;
+    height: 300px;
+    width: 220px;
+    margin-bottom: 30px;
 }
 
 /* PORTFOLIO PAGE */
