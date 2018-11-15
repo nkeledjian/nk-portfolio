@@ -23,12 +23,13 @@ main {
 }
 
 h1 {
+    font-size: 80px;
     color: rgb(207, 145, 93);
     padding: 500px 0 500px 0;
     font-family: 'Montserrat', sans-serif;
 }
 h3 {
-    color: rgb(214, 186, 162);
+    color: rgb(206, 171, 141);
     font-family: 'Raleway', sans-serif;
 }
 h4 {
