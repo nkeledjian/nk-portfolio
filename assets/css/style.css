@@ -84,8 +84,8 @@ footer {
 /* ABOUT PAGE */
 
 .aboutImg {
-    height: 300px;
-    width: 220px;
+    height: 85%;
+    width: 85%;
     margin-bottom: 30px;
     border-radius: 3%;
 }
