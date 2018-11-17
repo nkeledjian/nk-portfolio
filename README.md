@@ -1,2 +1,3 @@
-# bootstrap-portfolio
-Reworked portfolio with bootstrap
+# nk-portfolio
+New webpage concept
+Built with bootstrap
