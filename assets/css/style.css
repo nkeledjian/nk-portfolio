@@ -4,7 +4,13 @@
 /* GENERAL */
 
 body {
-    background-color: rgba(135, 194, 214, 0.582);  
+    background: url("../images/sunsetShellRidge.png");
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center; 
 }
 
 html {
