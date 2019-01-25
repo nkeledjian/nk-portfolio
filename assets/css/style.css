@@ -84,10 +84,14 @@ footer {
 /* ABOUT PAGE */
 
 .aboutImg {
-    height: 85%;
-    width: 85%;
+    height: 90%;
+    width: 90%;
     margin-bottom: 30px;
     border-radius: 3%;
+}
+
+.center-align {
+    text-align: center;
 }
 
 /* PORTFOLIO PAGE */
