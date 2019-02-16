@@ -4,13 +4,11 @@
 /* GENERAL */
 
 body {
-    background: url("../images/sunsetShellRidge.jpg");
-    background-repeat:no-repeat;
+    background: url("../images/sunsetShellRidge.jpg") no-repeat center center fixed;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover;
-    background-position:center; 
 }
 
 html {
@@ -38,8 +36,6 @@ h6 {
     font-family: 'Raleway', sans-serif;
     text-align: center;
 }
-
-
 
 .card-about {
     background-color: rgba(199, 167, 155, 0.616);
