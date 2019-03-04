@@ -105,11 +105,17 @@ footer {
     height: 80%;
 }
 
-.project-description {
+.project-title {
     border-radius: 5px;
     color: rgba(66, 64, 64, 0.664);
 }
 
+.project-description {
+    max-width: 388.8px;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 
