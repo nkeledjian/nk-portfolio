@@ -94,6 +94,11 @@ footer {
 
 /* PORTFOLIO PAGE */
 
+.tech-logo {
+    width: 100px;
+    height: 100px;
+}
+
 .card-portfolio {
     background-color: rgba(245, 245, 245, 0.698);
     margin-bottom: 10px;
