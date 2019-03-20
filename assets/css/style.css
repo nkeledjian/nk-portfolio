@@ -92,6 +92,10 @@ footer {
     text-align: center;
 }
 
+ul {
+    list-style: none;
+}
+
 /* PORTFOLIO PAGE */
 
 .tech-logo {
