@@ -11,10 +11,6 @@ body {
     background-size:cover;
 }
 
-/* nav {
-    position: relative;
-} */
-
 html {
     position: relative;
     min-height: 100%;
@@ -38,7 +34,11 @@ main {
     animation-duration: 6s;
 }
 
-/* Controls fade in animation for information heading and table */
+/* iframe {
+    margin-left: -20%;
+} */
+
+/* Controls fade in animation */
 @keyframes fadeIn {
     from {opacity: 0}
     to {opacity: 1; }
