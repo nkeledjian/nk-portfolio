@@ -31,7 +31,7 @@ main {
 .title-info {
     color: rgb(229, 184, 147);
     animation-name: fadeIn;
-    animation-duration: 6s;
+    animation-duration: 7s;
 }
 
 /* iframe {
