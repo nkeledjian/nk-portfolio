@@ -13,7 +13,8 @@
         canvas { background: #eee; display: block; margin: 0 auto; }
         a {text-decoration: none;}
         p {text-align: center;}
-        button { width: 20%; height: 60%; }
+        button > img { height: 100px; width: 100px;}
+        #btn-container { display: flex; justify-content: center;}
       </style>
   </head>
 
@@ -56,27 +57,29 @@
         <h1>BRICK SMASHER</h1>
       </div>
     </div>
+
+    <!-- *Canvas container -->
     <div class="row">
       <div class="col-md-12">
         <canvas id="bricksmasher" width="480" height="320"></canvas> <!--ORIGINAL: width="480" height="320"-->
       </div>
     </div>
-    <div class="row">
+
+    <!-- *Button container -->
+    <div class="#btn-container" style="margin-top: 1%">
       <!-- left button -->
-      <div class="col-md-4"></div>
-      <div class="col-md-2">
-        <button onclick="moveLeft()"></button>
-      </div>
+      <button onclick="moveLeft()"><img src="assets/images/arrowLeft.png"></img></button>
       <!-- right button -->
-      <div class="col-md-2">
-        <button onclick="moveRight()"></button>
+      <button onclick="moveRight()"><img src="assets/images/arrowRight.png"></img></button>
+    </div>
+
+    <!-- Link to MDN tutorial page -->
+    <div class="row" style="margin-top: 80px">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <a class="align" href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript"><p style="background-color: rgba(245, 245, 245, 0.596)">>Check out where I learned to build this game!<</p></a>
       </div>
       <div class="col-md-4"></div>
-    </div>
-    <div class="row" style="margin-top: 40px">
-      <div class="col-md-12">
-        <a class="align" href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript"><p>Check out where I learned to build this game!</p></a>
-      </div>
     </div>
 </div>  
     <footer>
