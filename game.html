@@ -61,7 +61,18 @@
         <canvas id="bricksmasher" width="480" height="320"></canvas> <!--ORIGINAL: width="480" height="320"-->
       </div>
     </div>
-    
+    <div class="row">
+      <!-- left button -->
+      <div class="col-md-4"></div>
+      <div class="col-md-2">
+        <button onclick="moveLeft()"></button>
+      </div>
+      <!-- right button -->
+      <div class="col-md-2">
+        <button onclick="moveRight()"></button>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
     <div class="row" style="margin-top: 40px">
       <div class="col-md-12">
         <a class="align" href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript"><p>Check out where I learned to build this game!</p></a>
@@ -116,6 +127,14 @@
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
   document.addEventListener("mousemove", mouseMoveHandler, false);
+
+  function moveLeft() {
+    alert("moving bar left!");
+  }
+
+  function moveRight() {
+    alert("moving bar right!");
+  }
 
   function mouseMoveHandler(e) {
     var relativeX = e.clientX - canvas.offsetLeft;
