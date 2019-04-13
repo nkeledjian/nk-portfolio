@@ -53,17 +53,21 @@
         </div>
     </nav>
     <div class="container">
+        <div class="row">
+            <div class="col-md-12 top-margin"></div>
+        </div>
 
         <div class="row">
             <div class="col-md-12">
-                <h1 class="title-info top-margin">Hello World, I'm Nareg. </h1>
+                <h1 class="title-info1"></h1>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">    
-                <h3 class="title-info">I am a web developer from the San Francisco Bay Area.</h3>
-                <h3 class="title-info">I love tinkering with tech and more...</h3>
+                <h3 class="title-info2"></h3>
+                <h3 class="title-info3"></h3>
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -81,13 +85,13 @@
         </div>
 
         <div class="row">
-            <!-- <div class="col-xs-1"></div> -->
+
             <div class="col-md-6">
                 <div class="center-align">
                     <img class="aboutImg" src="assets/images/headshot2019.jpg" alt="Portrait picture of Nareg">
                 </div>
             </div>
-            <!-- <div class="col-xs-1"></div> -->
+
             <div class="col-md-6">
                 <div class="card card-about">
                     <p>
@@ -355,4 +359,52 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"crossorigin="anonymous"></script>
+<!-- title-info logic -->
+<script>
+
+document.addEventListener('DOMContentLoaded', function(e){
+    var infoText = [
+        'Hello World, I\'m Nareg.',
+        'I am a web developer from the San Francisco Bay Area.',
+        'I love tinkering with tech and more...'
+    ];
+
+    // function to type one text at a time
+    // function will call itself until text runs out
+    // cb = callback function
+    function typeWriter(text, i, cb) {
+        // has the text been fully displayed?
+        if(i<(text.length)) {
+            // add the next character
+            document.querySelector('.title-info1').innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"> </span>';
+            // wait and then call setTimeout again for next character
+            setTimeout(function() {
+            typeWriter(text, i + 1, cb)
+            }, 100);
+        // with text finished, call cb if there is a cb function
+        } else if (typeof cb == 'function'){
+            // called after timeout
+            setTimeout(cb, 700);
+        } 
+    }
+    // start typewriter animation for text in infoText array
+    function beginTextAnimation(i) {
+        if(typeof infoText[i] == 'undefined') {
+            setTimeout(function(){
+                beginTextAnimation(0);
+            }, 20000);
+        }
+        // if infoText[i] exists
+        if(i < infoText[i].length) {
+            // then start the typewriter animation
+            typeWriter(infoText[i], 0, function(){
+                // after cb, and all text has been animated, start next text
+                beginTextAnimation(i + 1);
+            })
+        }
+    }
+    beginTextAnimation(0);
+})
+
+</script>
 </html>

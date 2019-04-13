@@ -28,15 +28,11 @@ main {
     margin-top: 30vh;
 }
 
-.title-info {
+.title-info1, .title-info2, .title-info3 {
     color: rgb(229, 184, 147);
     animation-name: fadeIn;
-    animation-duration: 7s;
+    animation-duration: 5s;
 }
-
-/* iframe {
-    margin-left: -20%;
-} */
 
 /* Controls fade in animation */
 @keyframes fadeIn {
@@ -73,7 +69,6 @@ h6 {
     margin-bottom: 20px;
     padding: 20px 20px 20px 20px;
 }
-
 
 .btn-contact {
     margin-bottom: 5px;
