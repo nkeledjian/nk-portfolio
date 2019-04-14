@@ -68,14 +68,12 @@ h6 {
     padding: 200px 0 200px 0;
 }
 
-.micro-text {
-    font-size: 70%;
-}
-
 .card-about {
-    background-color: rgba(245, 245, 245, 0.808);
+    background-color: rgba(245, 245, 245, 0.863);
+    text-shadow: 1px 1px 20px rgb(160, 160, 160); 
     margin-bottom: 20px;
     padding: 20px 20px 20px 20px;
+    box-shadow: 0px 5px 5px;
 }
 
 
@@ -108,8 +106,8 @@ footer {
 /* ABOUT PAGE */
 
 .aboutImg {
-    height: 70%;
-    width: 70%;
+    height: 80%;
+    width: 80%;
     margin-bottom: 30px;
     border-radius: 3%;
 }
@@ -130,7 +128,8 @@ ul {
 }
 
 .card-portfolio {
-    background-color: rgba(245, 245, 245, 0.781);
+    background-color: rgba(245, 245, 245, 0.863);
+    text-shadow: 1px 1px 20px rgb(160, 160, 160); 
     margin-bottom: 10px;
     box-shadow: 0px 5px 5px;
 }
