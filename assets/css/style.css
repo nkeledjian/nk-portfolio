@@ -4,7 +4,8 @@
 /* GENERAL */
 
 body {
-    background: url("../images/redwoodNatPark.jpg") no-repeat center center fixed;
+    background: linear-gradient(rgba(155, 238, 155, 0.39), rgba(245, 245, 245, 0.39)), url("../images/redwoodNatPark.jpg") no-repeat center center fixed;
+    /* background: url("../images/redwoodNatPark.jpg") no-repeat center center fixed; */
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
@@ -155,9 +156,11 @@ ul {
     body {
       /* The file size of this background image is 93% smaller
          to improve page load speed on mobile internet connections */
-      background-image: url("../images/redwoodNatParkSmall.jpg");
+      /* background-image: url("../images/redwoodNatParkSmall.jpg");
     }
-  } */
+  } 
+  
+*/ 
 
 
 
