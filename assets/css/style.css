@@ -4,7 +4,7 @@
 /* GENERAL */
 
 body {
-    background: url("../images/sunsetShellRidge.jpg") no-repeat center center fixed;
+    background: url("../images/redwoodNatPark.jpg") no-repeat center center fixed;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
@@ -29,14 +29,16 @@ main {
 }
 
 .title-info {
-    color: rgb(229, 184, 147);
+    color: rgb(255, 255, 255);
     animation-name: fadeIn;
-    animation-duration: 7s;
+    animation-duration: 5s;
 }
 
-/* iframe {
-    margin-left: -20%;
-} */
+.nkLogo {
+    outline: 2px solid white;
+    outline-offset: 6px;
+    font-weight: 700;
+}
 
 /* Controls fade in animation */
 @keyframes fadeIn {
@@ -46,16 +48,18 @@ main {
 
 h1 {
     font-size: 50px;
-    color: rgb(207, 145, 93);
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 4px black; 
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 h3, h4, h5 {
-    color: rgb(133, 96, 64);
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 4px black; 
     font-family: 'Raleway', sans-serif;
 }
 h6 {
-    color: rgb(109, 85, 64);
+    color: rgb(0, 0, 0);
     font-family: 'Raleway', sans-serif;
     text-align: center;
 }
@@ -69,7 +73,7 @@ h6 {
 }
 
 .card-about {
-    background-color: rgba(245, 245, 245, 0.698);
+    background-color: rgba(245, 245, 245, 0.808);
     margin-bottom: 20px;
     padding: 20px 20px 20px 20px;
 }
@@ -82,15 +86,18 @@ h6 {
 
 #footertxt {
     text-align: center;
+    text-shadow: 4px 4px 8px rgba(36, 110, 17, 0.932); 
     font-weight: 600;
     color: whitesmoke;
 }
+
 .footpos {
     display: flex;
     align-items: center;
 }
+
 footer {
-    border-top: 10px solid rgba(230, 105, 56, 0.932);
+    border-top: 12px solid rgba(36, 110, 17, 0.932);
     background-color: rgb(48, 53, 53);
     margin-top: 20em;
     padding-top: 20px;
@@ -123,7 +130,7 @@ ul {
 }
 
 .card-portfolio {
-    background-color: rgba(245, 245, 245, 0.698);
+    background-color: rgba(245, 245, 245, 0.781);
     margin-bottom: 10px;
     box-shadow: 0px 5px 5px;
 }
