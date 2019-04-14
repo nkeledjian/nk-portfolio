@@ -33,10 +33,15 @@
       width: 100px;
     }
 
-    #btn-container {
+    button {
+      background-color: rgba(255, 255, 255, 0.397);
+    }
+
+    .btn-container {
       display: flex;
       justify-content: center;
     }
+
   </style>
 </head>
 
@@ -79,7 +84,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>BRICK SMASHER</h1>
+        <h1 style="margin-top: 5%; margin-bottom: 5%;">BRICK SMASHER</h1>
       </div>
     </div>
 
@@ -92,15 +97,17 @@
     </div>
 
     <!-- *Button container -->
-    <div class="#btn-container" style="margin-top: 1%">
+    <div class="btn-container" style="margin-top: 3%">
       <!-- left button -->
       <button id="moveLeft" onmousedown="activateLeft()" onmouseup="deactivateLeft()"><img src="assets/images/arrowLeft.png"></img></button>
+      <!-- Spacer for Buttons -->
+      <div style="margin-left: 3%; margin-right: 3%;"></div>
       <!-- right button -->
       <button id="moveRight" onmousedown="activateRight()" onmouseup="deactivateRight()"><img src="assets/images/arrowRight.png"></img></button>
     </div>
 
     <!-- Link to MDN tutorial page -->
-    <div class="row" style="margin-top: 80px">
+    <div class="row" style="margin-top: 7%">
       <div class="col-md-4"></div>
         <div class="col-md-4">
         <a class="align"
@@ -128,7 +135,9 @@
 <!--BEGIN 2D JavaScript Game - BRICK SMASHER -->
 <script>
   var canvas = document.getElementById("bricksmasher");
+  // ctx = context; determines the canvas dimensions in this case 2 dimentional 
   var ctx = canvas.getContext("2d");
+  // *game components
   var ballRadius = 10;
   var x = canvas.width / 2;
   var y = canvas.height - 30;
@@ -317,7 +326,7 @@
     }
     x += dx;
     y += dy;
-    requestAnimationFrame(draw); /* requestAnimationFrame is the newest standard for rendering frames/graphics. The old standard, setInterval() (which controls the time delay between frames), has been phased out. */
+    requestAnimationFrame(draw); /* requestAnimationFrame is the newest standard for rendering frames/graphics. The old standard, setInterval() (which controls the time delay between frames), has been phased out for HTML canvas. */
   }
 
   draw();
