@@ -4,12 +4,28 @@
 /* GENERAL */
 
 body {
-    background: linear-gradient(rgba(155, 238, 155, 0.39), rgba(245, 245, 245, 0.39)), url("../images/redwoodNatPark.jpg") no-repeat center center fixed;
-    /* background: url("../images/redwoodNatPark.jpg") no-repeat center center fixed; */
+    /* background: linear-gradient(rgba(155, 238, 155, 0.39), rgba(245, 245, 245, 0.39)), url("../images/redwoodNatPark.jpg") no-repeat center center fixed;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
-    background-size:cover;
+    background-size:cover; */
+
+    background: linear-gradient(rgba(22, 80, 8, 0.774), rgba(115, 184, 98, 0.651));
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+}
+
+.background {
+    background: url("../images/redwoodNatPark.jpg") no-repeat fixed;
+    width: 100%;
+    /* -webkit-background-size:cover; */
+    /* -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover; */
+    /* background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center; */
 }
 
 html {
