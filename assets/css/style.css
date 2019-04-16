@@ -5,7 +5,7 @@
 
 /* remove default browser specific padding and margin of EVERY element using universal selector (the asterisk) *  */
 * {
-    /* makes resizing elements easier */
+    /* box-sizing helps with resizing elements */
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -18,27 +18,24 @@ body {
     -o-background-size:cover;
     background-size:cover; */
 
-    background: linear-gradient(rgba(22, 80, 8, 0.774), rgba(115, 184, 98, 0.651));
-    background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.774)); */
+    background-color: rgb(48, 53, 53);
     /* default font */
     font-family: 'Josefin Sans', sans-serif;
+    color: white;
 }
 
-.background {
+/* .background {
     background: url("../images/redwoodNatPark.jpg") no-repeat fixed;
     width: 100%;
-    /* -webkit-background-size:cover; */
-    /* -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover; */
-    /* background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center; */
-}
+} */
 
 .navbar {
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    z-index: 9999;
+    width: 100%;
     font-size: 18px;
     background-image: linear-gradient(260deg, rgba(36, 110, 17, 0.932) 0%, rgb(48, 53, 50)   100%);
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -72,41 +69,27 @@ body {
     display: block;
 }
 
-.top-margin {
-    margin-top: 30vh;
-}
-
-.btm-margin {
-    margin-top: 30vh;
-}
-
 .title-info {
     color: rgb(255, 255, 255);
     animation-name: fadeIn;
     animation-duration: 5s;
 }
 
-/* Controls fade in animation */
-@keyframes fadeIn {
-    from {opacity: 0}
-    to {opacity: 1; }
-}
-
 h1 {
     font-size: 50px;
     color: rgb(255, 255, 255);
     text-shadow: 4px 4px 4px black; 
-    font-family: 'Montserrat', sans-serif;
+
     text-align: center;
 }
 h3, h4, h5 {
     color: rgb(255, 255, 255);
     text-shadow: 4px 4px 4px black; 
-    font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 h6 {
     color: rgb(0, 0, 0);
-    font-family: 'Raleway', sans-serif;
+
     text-align: center;
 }
 
@@ -122,10 +105,6 @@ h6 {
     box-shadow: 0px 5px 5px;
 }
 
-
-.btn-contact {
-    margin-bottom: 5px;
-}
 /* FOOTER */
 
 #footertxt {
@@ -152,8 +131,8 @@ footer {
 /* ABOUT PAGE */
 
 .aboutImg {
-    height: 80%;
-    width: 80%;
+    height: 40%;
+    width: 40%;
     margin-bottom: 30px;
     border-radius: 3%;
 }
@@ -197,15 +176,43 @@ ul {
     align-items: center;
 }
 
-/* @media only screen and (max-width: 767px) {
-    body {
-      /* The file size of this background image is 93% smaller
-         to improve page load speed on mobile internet connections */
-      /* background-image: url("../images/redwoodNatParkSmall.jpg");
+/* any viewport bigger than 768px will swap out the hamburger bar and 
+will display nav items on nav */
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
     }
-  } 
-  
-*/ 
-
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .nav-links {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .navbar-toggle {
+       display: none;
+    }
+    .logo:hover,
+    .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+    /* Controls fade in animation */
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1; }
+}
 
 
