@@ -1,9 +1,6 @@
-/*id = # (HIGH priority - style a single element, renders once)*/
-/*class = . (LOW priority - style as many times as you like*/
-
 /* GENERAL */
 
-/* remove default browser specific padding and margin of EVERY element using universal selector (the asterisk) *  */
+/* remove default browser specific padding and margin of EVERY element using universal selector (asterisk) *  */
 * {
     /* box-sizing helps with resizing elements */
     box-sizing: border-box;
@@ -30,6 +27,19 @@ body {
     width: 100%;
 } */
 
+.container-intro {
+    width: 400px;
+    max-height: 250px;
+    position: relative;
+  }
+
+.container-portfolio {
+    width: 400px;
+    max-height: 250px;
+    position: relative;
+}
+
+/* NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
@@ -40,6 +50,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 10px;
 }
+
 .navbar-toggle {
     position: absolute;
     top: 10px;
@@ -52,6 +63,7 @@ body {
     /* transition: 1.0s; */
     /* transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1) */
 }
+
 .main-nav {
     list-style-type: none;
     display: none;
@@ -72,6 +84,7 @@ body {
     display: block;
 }
 
+/* TITLES/TEXTS */
 .title-info {
     color: rgb(255, 255, 255);
     animation-name: fadeIn;
@@ -99,13 +112,6 @@ h6 {
     padding: 200px 0 200px 0;
 }
 
-
-
-
-
-
-
-
 /* .card-about {
     background-color: rgba(245, 245, 245, 0.863);
     text-shadow: 1px 1px 20px rgb(160, 160, 160); 
@@ -113,11 +119,6 @@ h6 {
     padding: 20px 20px 20px 20px;
     box-shadow: 0px 5px 5px;
 } */
-
-
-
-
-
 
 /* FOOTER */
 
@@ -160,6 +161,20 @@ ul {
 }
 
 /* PORTFOLIO PAGE */
+
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.tech-logo {
+    /* flex: 1; */
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
 
 .tech-container {
     display: flex;
@@ -232,7 +247,8 @@ will display nav items on nav */
         color: rgba(255, 255, 255, 1);
     }
 }
-    /* Controls fade in animation */
+
+/* Controls fade in animation */
 @keyframes fadeIn {
     from {opacity: 0}
     to {opacity: 1; }
