@@ -131,7 +131,10 @@ footer {
     margin-top: 20em;
     padding-top: 20px;
     padding-bottom: 15px;
-    position: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 /* ABOUT PAGE */
