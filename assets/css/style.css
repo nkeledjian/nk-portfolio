@@ -28,6 +28,13 @@ body {
 } */
 
 .container-intro {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-intro-item {
     width: 400px;
     max-height: 250px;
     position: relative;
@@ -37,6 +44,8 @@ body {
     width: 400px;
     max-height: 250px;
     position: relative;
+    padding-top: 20em;
+    padding-bottom: 10em;
 }
 
 /* NAVBAR */
