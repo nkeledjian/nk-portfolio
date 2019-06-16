@@ -27,28 +27,8 @@ body {
     width: 100%;
 } */
 
-.container-intro {
-    position: relative;
-    display: block;
-    justify-content: center;
-    /* margin-left: auto;
-    margin-right: auto; */
-}
 
-.container-intro-item {
-    display: flex;
-    flex-direction: column;
-}
 
-.container-portfolio {
-    width: 400px;
-    max-height: 250px;
-    position: relative;
-    transform: translate(-50%, -50%)
-    padding-top: 20em;
-    padding-bottom: 10em;
-    margin-bottom: 10em;
-}
 
 /* NAVBAR */
 .navbar {
@@ -93,6 +73,38 @@ body {
 
 
 
+
+/* PORTFOLIO LAYOUT */
+
+.container-intro {
+    position: relative;
+    display: block;
+    justify-content: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.container-intro-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-portfolio {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    max-height: 250px;
+    /* padding-top: 20em;
+    padding-bottom: 10em;
+    margin-bottom: 10em; */
+}
+
+.container-portfolio-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 /* TITLES/TEXTS */
 .title-info {
     color: rgb(255, 255, 255);
@@ -120,6 +132,12 @@ h6 {
     padding: 200px 0 200px 0;
 }
 
+.portfolio-spacer {
+    padding: 100px 0 200px 0;
+}
+
+
+
 /* FOOTER */
 
 #footertxt {
@@ -141,6 +159,8 @@ footer {
     width: 100%;
 }
 
+
+
 /* ABOUT PAGE */
 
 .aboutImg {
@@ -155,6 +175,9 @@ footer {
 ul {
     list-style: none;
 }
+
+
+
 
 /* PORTFOLIO PAGE */
 
@@ -231,7 +254,7 @@ will display nav items on nav */
     }
 }
 
-/* Controls fade in animation */
+/* fade in animation for intro text */
 @keyframes fadeIn {
     from {opacity: 0}
     to {opacity: 1; }
