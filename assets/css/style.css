@@ -30,22 +30,24 @@ body {
 .container-intro {
     position: relative;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
 .container-intro-item {
-    width: 400px;
-    max-height: 250px;
-    position: relative;
-  }
+    display: flex;
+    flex-direction: column;
+}
 
 .container-portfolio {
     width: 400px;
     max-height: 250px;
     position: relative;
+    transform: translate(-50%, -50%)
     padding-top: 20em;
     padding-bottom: 10em;
+    margin-bottom: 10em;
 }
 
 /* NAVBAR */
@@ -67,10 +69,6 @@ body {
     cursor: pointer; 
     color: rgba(255,255,255,0.8);
     font-size: 24px;
-    /* transform-origin: 100%; */
-    /* transform: rotateX(-20deg); */
-    /* transition: 1.0s; */
-    /* transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1) */
 }
 
 .main-nav {
@@ -92,6 +90,8 @@ body {
 .active {
     display: block;
 }
+
+
 
 /* TITLES/TEXTS */
 .title-info {
@@ -129,11 +129,6 @@ h6 {
     color: whitesmoke;
 }
 
-.footpos {
-    display: flex;
-    align-items: center;
-}
-
 footer {
     border-top: 12px solid rgba(36, 110, 17, 0.932);
     background-color: rgb(48, 53, 53);
@@ -149,10 +144,8 @@ footer {
 /* ABOUT PAGE */
 
 .aboutImg {
-    height: 40%;
-    width: 40%;
-    margin-bottom: 30px;
-    border-radius: 50%;
+    height: 25%;
+    width: 25%;
 }
 
 .center-align {
@@ -169,6 +162,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
 }
 
 .tech-logo {
