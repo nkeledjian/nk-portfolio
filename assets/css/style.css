@@ -87,7 +87,6 @@ h6 {
 
 .card-about {
     background-color: rgba(245, 245, 245, 0.863);
-    text-shadow: 1px 1px 20px rgb(160, 160, 160); 
     margin-bottom: 20px;
     padding: 20px 20px 20px 20px;
     box-shadow: 0px 5px 5px;
@@ -168,15 +167,6 @@ ul {
     align-items: center;
 }
 
-/* @media only screen and (max-width: 767px) {
-    body {
-      /* The file size of this background image is 93% smaller
-         to improve page load speed on mobile internet connections */
-      /* background-image: url("../images/redwoodNatParkSmall.jpg");
-    }
-  } 
-  
-*/ 
 
 
 
