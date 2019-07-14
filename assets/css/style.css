@@ -71,7 +71,7 @@ body {
 
 .nkLogo {
     border: 2px solid white;
-    padding: 2px 2px 2px 2px;
+    padding: 4px 4px 4px 4px;
 }
 
 
@@ -81,13 +81,14 @@ body {
     position: relative;
     display: block;
     justify-content: center;
-    /* margin-left: auto;
-    margin-right: auto; */
 }
 
 .container-intro-item {
     display: flex;
     flex-direction: column;
+    background: rgba(255, 255, 255, 0.267);
+    padding: 3% 0 3% 0;
+    max-width: auto;
 }
 
 .container-portfolio {
@@ -100,7 +101,7 @@ body {
 .container-portfolio-item {
     justify-content: center;
     align-items: center;
-    border: 5px solid white;
+    border: 2px solid white;
 }
 
 
@@ -133,7 +134,7 @@ h6 {
 }
 
 .portfolio-spacer {
-    padding: 100px 0 200px 0;
+    padding: 200px 0 200px 0;
 }
 
 
@@ -178,9 +179,6 @@ ul {
     list-style: none;
 }
 
-
-
-
 /* PORTFOLIO PAGE */
 
 .tech-container {
@@ -188,6 +186,8 @@ ul {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .tech-logo {
