@@ -1,8 +1,6 @@
 /* GENERAL */
 
-/* remove default browser specific padding and margin of EVERY element using universal selector (asterisk) *  */
 * {
-    /* box-sizing helps with resizing elements */
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -71,7 +69,10 @@ body {
     display: block;
 }
 
-
+.nkLogo {
+    border: 2px solid white;
+    padding: 2px 2px 2px 2px;
+}
 
 
 /* PORTFOLIO LAYOUT */
@@ -91,18 +92,17 @@ body {
 
 .container-portfolio {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    width: 400px;
-    max-height: 250px;
-    /* padding-top: 20em;
-    padding-bottom: 10em;
-    margin-bottom: 10em; */
 }
 
 .container-portfolio-item {
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
 }
+
 
 
 /* TITLES/TEXTS */
@@ -206,8 +206,8 @@ ul {
 }
 
 .portImg {
-    width: 60%;
-    height: 60%;
+    width: 200px;
+    height: 200px;
 }
 
 .project-title {
