@@ -86,7 +86,7 @@ body {
 .container-intro-item {
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.267);
+    background: rgba(255, 255, 255, 0.185);
     padding: 3% 0 3% 0;
     max-width: auto;
 }
@@ -186,8 +186,13 @@ ul {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+}
+
+.tech-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .tech-logo {
@@ -196,6 +201,10 @@ ul {
     height: 100px;
     justify-content: center;
     align-items: center;
+}
+
+.section-spacer-tech {
+    padding: 25px 0 25px 0;
 }
 
 .card-portfolio {
