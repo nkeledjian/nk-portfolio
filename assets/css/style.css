@@ -145,20 +145,15 @@ ul {
 
 @media only screen and (max-width: 767px) {
   body {
-    /* The file size of this background image is 93% smaller
-       to improve page load speed on mobile internet connections */
     margin: 0;
     background: url("../images/redwoodNatParkSmall.jpg");
-    background-size: cover;
+    background-size: auto;
     background-attachment: fixed;
-    max-width: 100%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   body {
-    /* The file size of this background image is 93% smaller
-       to improve page load speed on mobile internet connections */
     margin: 0;
     background: url("../images/redwoodNatPark.jpg");
     background-size: cover;
