@@ -5,16 +5,13 @@ html {
     height: 100%;
 }
 
-body {
+/* body {
     margin: 0;
     background: url("../images/redwoodNatPark.jpg");
     background-size: cover;
     background-attachment: fixed;
-}
-
-main {
-    position:fixed;
-}
+    max-width: 100%;
+} */
 
 .top-margin {
     margin-top: 30vh;
@@ -146,6 +143,27 @@ ul {
     align-items: center;
 }
 
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+       to improve page load speed on mobile internet connections */
+    margin: 0;
+    background: url("../images/redwoodNatParkSmall.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 100%;
+  }
+}
 
-
+@media only screen and (min-width: 768px) {
+  body {
+    /* The file size of this background image is 93% smaller
+       to improve page load speed on mobile internet connections */
+    margin: 0;
+    background: url("../images/redwoodNatPark.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 100%;
+  }
+}
 
